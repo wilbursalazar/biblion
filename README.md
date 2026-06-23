@@ -29,6 +29,8 @@ More examples:
 
 Ranges can stay within one chapter, such as `;;Romans 8:38-39`, or cross chapters, such as `;;John 3:16-4:2`.
 
+You can also run `Biblion: Expand Bible reference on current line` from the command palette.
+
 ## Q&A
 
 ### Which Bible translation does Biblion use?

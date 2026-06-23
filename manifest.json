@@ -3,7 +3,7 @@
   "name": "Biblion",
   "version": "0.1.0",
   "minAppVersion": "1.5.0",
-  "description": "Expands triggered Douay-Rheims Bible references into verse text.",
+  "description": "Turn Bible verse references into verse text in your notes.",
   "author": "Wilbur Salazar",
   "authorUrl": "https://faithdeposited.com",
   "isDesktopOnly": false

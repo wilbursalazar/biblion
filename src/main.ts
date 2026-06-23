@@ -1,10 +1,18 @@
 import { EditorSelection, Prec } from "@codemirror/state";
 import { keymap } from "@codemirror/view";
-import { Notice, Plugin } from "obsidian";
+import { Notice, Plugin, type Editor } from "obsidian";
 import { tryExpandTriggerLine } from "./verse";
 
 export default class BibleVerseExpanderPlugin extends Plugin {
   onload() {
+    this.addCommand({
+      id: "expand-bible-reference",
+      name: "Expand Bible reference on current line",
+      editorCallback: (editor) => {
+        expandEditorLine(editor);
+      },
+    });
+
     this.registerEditorExtension(
       Prec.highest(keymap.of([
         {
@@ -50,4 +58,28 @@ export default class BibleVerseExpanderPlugin extends Plugin {
       ])),
     );
   }
+}
+
+function expandEditorLine(editor: Editor) {
+  const cursor = editor.getCursor("head");
+  const lineText = editor.getLine(cursor.line);
+  const result = tryExpandTriggerLine(lineText);
+
+  if (!result.handled) {
+    new Notice("Type ;;John 3:16 on the current line, then run this command.");
+    return;
+  }
+
+  if (!("replacement" in result)) {
+    new Notice(result.error);
+    return;
+  }
+
+  const insert = `${result.replacement}\n`;
+  editor.replaceRange(
+    insert,
+    { line: cursor.line, ch: 0 },
+    { line: cursor.line, ch: lineText.length },
+  );
+  editor.setCursor({ line: cursor.line + insert.split("\n").length - 1, ch: 0 });
 }
