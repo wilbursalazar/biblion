@@ -1,7 +1,12 @@
-import builtins from "builtin-modules";
+import { builtinModules } from "node:module";
 import esbuild from "esbuild";
 
 const prod = process.argv.includes("--prod");
+const nodeBuiltins = builtinModules.flatMap((moduleName) =>
+  moduleName.startsWith("node:")
+    ? [moduleName]
+    : [moduleName, `node:${moduleName}`],
+);
 
 await esbuild.build({
   banner: {
@@ -23,7 +28,7 @@ await esbuild.build({
     "@lezer/common",
     "@lezer/highlight",
     "@lezer/lr",
-    ...builtins,
+    ...nodeBuiltins,
   ],
   format: "cjs",
   logLevel: "info",
