@@ -1,6 +1,6 @@
 # Biblion
 
-Biblion expands a Bible reference into Douay-Rheims verse text directly in your Obsidian note.
+Biblion turns Bible verse references into verse text directly in your Obsidian note.
 
 ## Usage
 
@@ -24,15 +24,21 @@ More examples:
 
 ```text
 ;;Romans 8:38-39
-;;Tobit 12:15
-;;Sirach 2:1
-;;1 Maccabees 2:52
+;;John 3:16-4:2
 ```
 
 Ranges can stay within one chapter, such as `;;Romans 8:38-39`, or cross chapters, such as `;;John 3:16-4:2`.
 
-Older Douay-style names such as `1 Machabees`, `Ecclesiasticus`, and `Apocalypse` are accepted as aliases, but expanded references use modern book names.
+## Q&A
 
-## Translation
+### Which Bible translation does Biblion use?
 
-This plugin bundles the public-domain Douay-Rheims text from the GetBible `douayrheims` module. The bundled data includes 73 books, including the deuterocanonical books.
+Biblion uses the public-domain Douay-Rheims text from the GetBible `douayrheims` module.
+
+### Does it support books like Tobit, Sirach, and Maccabees?
+
+Yes. Biblion bundles 73 books, including the deuterocanonical books.
+
+### Can I type older book names?
+
+Yes. Older Douay-style names such as `1 Machabees`, `Ecclesiasticus`, and `Apocalypse` are accepted as aliases, but expanded references use modern book names.
