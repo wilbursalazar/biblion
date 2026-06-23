@@ -20,6 +20,8 @@ Biblion replaces it with:
 > -- John 3:16 (DRB)
 ```
 
+![Biblion demo: expanding a Bible verse reference](assets/biblion.gif)
+
 More examples:
 
 ```text
