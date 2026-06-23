@@ -1,0 +1,29 @@
+{
+  "name": "bible-verse-expander",
+  "version": "0.1.0",
+  "description": "Obsidian plugin that expands Douay-Rheims Bible references typed with a trigger prefix.",
+  "main": "main.js",
+  "scripts": {
+    "build": "node scripts/build.mjs --prod",
+    "build:dev": "node scripts/build.mjs",
+    "prepare:data": "node scripts/prepare-douay-data.mjs",
+    "test": "npm run typecheck && node scripts/build-parser-test.mjs && node scripts/smoke-test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "obsidian",
+    "bible",
+    "douay-rheims"
+  ],
+  "author": "Wilbur Salazar",
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/state": "6.5.0",
+    "@codemirror/view": "^6.38.3",
+    "@types/node": "^24.0.3",
+    "builtin-modules": "^5.0.0",
+    "esbuild": "^0.25.5",
+    "obsidian": "^1.8.7",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,18 @@
+# Editors
+.vscode
+*.iml
+.idea
+
+# npm
+node_modules
+
+# Build outputs belong in GitHub releases, not source commits.
+main.js
+*.map
+dist
+
+# Obsidian local plugin settings
+data.json
+
+# macOS
+.DS_Store

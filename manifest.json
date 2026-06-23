@@ -1,0 +1,9 @@
+{
+  "id": "bible-verse-expander",
+  "name": "Bible Verse Expander",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Expands triggered Douay-Rheims Bible references into verse text.",
+  "author": "Wilbur Salazar",
+  "isDesktopOnly": false
+}
