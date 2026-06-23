@@ -1,23 +1,37 @@
 # Biblion
 
-An Obsidian plugin that expands a triggered Bible reference into Douay-Rheims verse text.
+Biblion expands a Bible reference into Douay-Rheims verse text directly in your Obsidian note.
 
 ## Usage
 
-Type a reference at the start of a line with the `;;` trigger, then press Enter:
+Type `;;`, then a Bible reference, then press Enter.
+
+For example, type this on its own line:
 
 ```text
 ;;John 3:16
+```
+
+Biblion replaces it with:
+
+```markdown
+> For God so loved the world, as to give his only begotten Son: that whosoever believeth in him may not perish, but may have life everlasting.
+>
+> -- John 3:16 (DRB)
+```
+
+More examples:
+
+```text
 ;;Romans 8:38-39
 ;;Tobit 12:15
 ;;Sirach 2:1
 ;;1 Maccabees 2:52
 ```
 
-The trigger line is replaced with a Markdown block quote and a reference line.
-Older Douay-style names such as `1 Machabees`, `Ecclesiasticus`, and
-`Apocalypse` are accepted as aliases, but expanded references use modern book
-names.
+Ranges can stay within one chapter, such as `;;Romans 8:38-39`, or cross chapters, such as `;;John 3:16-4:2`.
+
+Older Douay-style names such as `1 Machabees`, `Ecclesiasticus`, and `Apocalypse` are accepted as aliases, but expanded references use modern book names.
 
 ## Translation
 
