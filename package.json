@@ -1,5 +1,5 @@
 {
-  "name": "bible-verse-expander",
+  "name": "biblion",
   "version": "0.1.0",
   "description": "Obsidian plugin that expands Douay-Rheims Bible references typed with a trigger prefix.",
   "main": "main.js",

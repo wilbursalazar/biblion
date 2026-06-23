@@ -5,7 +5,7 @@ const prod = process.argv.includes("--prod");
 
 await esbuild.build({
   banner: {
-    js: "/* Bible Verse Expander - bundled for Obsidian */",
+    js: "/* Biblion - bundled for Obsidian */",
   },
   bundle: true,
   entryPoints: ["src/main.ts"],

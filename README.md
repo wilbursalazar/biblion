@@ -1,4 +1,4 @@
-# Bible Verse Expander
+# Biblion
 
 An Obsidian plugin that expands a triggered Bible reference into Douay-Rheims verse text.
 
